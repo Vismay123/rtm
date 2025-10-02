@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BiBriefcase } from "react-icons/bi";
-import {
-  FaHome,
-  FaUser,
-  FaSignOutAlt,
-} from "react-icons/fa";
+import { FaHome, FaUser, FaSignOutAlt } from "react-icons/fa";
 import { NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
 import "../styles/Prototype.css";
 import clientlogo from "../../assets/clientlogo.png";
@@ -44,6 +40,14 @@ const Dashboard = () => {
     switch (pathname) {
       case "/dashboard/home":
         return "Home";
+      case "/dashboard/home/kt":
+        return "KT Section";
+      case "/dashboard/home/hardware":
+        return "Hardware Setup";
+      case "/dashboard/home/software":
+        return "Software Setup";
+      case "/dashboard/home/team":
+        return "Project Team Architecture";
       default:
         return "";
     }
@@ -60,14 +64,27 @@ const Dashboard = () => {
         </div>
 
         <nav className="nav-links">
-          {/* Home Dropdown */}
-          <button
-            className={`nav-button ${isHomeDropdownOpen ? "active" : ""}`}
-            onClick={() => setHomeDropdownOpen(!isHomeDropdownOpen)}
-          >
-            <FaHome />
-            <span>Home</span>
-          </button>
+          {/* Home with Dropdown */}
+          <div className="nav-button-wrapper">
+            <NavLink
+              to="/dashboard/home"
+              className={({ isActive }) =>
+                `nav-button ${isActive ? "active" : ""}`
+              }
+            >
+              <FaHome />
+              <span>Home</span>
+            </NavLink>
+
+            {/* Dropdown toggle only */}
+            <button
+              className={`dropdown-toggle ${isHomeDropdownOpen ? "open" : ""}`}
+              onClick={() => setHomeDropdownOpen(!isHomeDropdownOpen)}
+            >
+              ▾
+            </button>
+          </div>
+
           {isHomeDropdownOpen && (
             <div className="dropdown-submenu">
               <NavLink
