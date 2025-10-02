@@ -1,0 +1,40 @@
+
+.scene-container {
+  width: 1000px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.controls button:hover {
+  background-color: #f2f2f2;
+}
+
+.controls button:active {
+  transform: scale(0.96);
+}
+
+canvas {
+  display: block;
+}

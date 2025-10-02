@@ -1,0 +1,153 @@
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  
+}
+.footer-logo img {
+   max-width: 160px;
+  max-height: 60px;
+  transition: all 0.3s ease;
+}
+
+.footer-logo p {
+  margin: 0 0 3px 0; 
+  font-size: 14px;
+  color: #000000;
+}
+.content-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align children to left */
+  padding: 30px;
+  border-radius: 12px;
+  background: #fff;
+  text-align: left;        /* Text aligned left */
+  width: 100%;
+}
+
+
+.hamburger-hover-wrapper {
+  position: absolute;
+  top: 40px;
+  right: 1288px;
+  z-index: 9999;
+}
+
+.hamburger-toggle {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.hamburger-toggle .bar {
+  width: 20px;
+  height: 2px;
+  background-color: #e94646;
+  margin: 4px 0;
+}
+
+.hover-nav-card {
+  flex-direction: column;
+  position: absolute;
+  top: 120%;
+  left: 70px;
+  background: #dddddd;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1001;
+  min-width: 180px;
+}
+
+.hover-nav-card .nav-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.hover-nav-card .nav-button:hover {
+  background-color: #ffecec;
+  color: #ff4d4d;
+  border-radius: 6px;
+}
+
+.sidebar.closed ~ .main-content .hamburger-hover-wrapper {
+  left: 0px; /* match your closed sidebar width */
+}
+
+
+
+.app-logo{
+  z-index: 1000;
+}
+
+.admin-dropdown {
+  position: absolute;
+  top: 70px; /* just below the logo */
+  right: 10px;
+  z-index: 9999; /* high z-index to sit on top */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-item .icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.admin-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #ff4d4f;
+  margin: 8px 0;
+}
+
+.logout-btn {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.icon{
+  color: #ff0000;
+}
+.arjun{
+  color: #ff0000;
+}

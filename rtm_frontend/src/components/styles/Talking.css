@@ -1,0 +1,270 @@
+
+
+/* Right side */
+.right-panel {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.face-img {
+  margin-top: 50px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+.mouth-animation {
+  position: absolute;
+ bottom: 30%; 
+  left: 43%;
+width: 35px;
+  background: #fabc93;
+  border-radius: 50px;
+  transition: height 0.1s ease;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+  font-size: 18px;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+.mouth-animation {
+  position: absolute;
+  bottom: 34%;
+  left: 43%;
+  width: 35px;
+  height: 10px;
+  background: radial-gradient(circle at center, #fabc93 0%, #fabc93 100%);
+  border-radius: 50% / 60%;
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+}
+
+.mouth-animation.speaking {
+  animation: mouthTalk 0.15s infinite alternate ease-in-out;
+}
+
+@keyframes mouthTalk {
+  from {
+    transform: scaleY(0.8) scaleX(1);
+  }
+  to {
+    transform: scaleY(2.5) scaleX(1.1);
+  }
+}
+
+
+
+.voice-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+
+.controls-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.upload-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.primary-btn {
+  background: #007bff;
+  color: #fff;
+  margin-top: 15px;
+}
+.primary-btn:hover {
+  background: #0056b3;
+}
+
+.secondary-btn {
+  background: #27ae60;
+  color: #fff;
+  margin-top: 15px;
+}
+.secondary-btn:hover {
+  background: #1e8449;
+}
+
+/* Recording buttons */
+.record-btns {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.record-btn.start {
+  background: #e67e22;
+  color: #fff;
+}
+.record-btn.start:hover {
+  background: #ca6f1e;
+}
+.record-btn.stop {
+  background: #c0392b;
+  color: #fff;
+}
+.record-btn.stop:hover {
+  background: #922b21;
+}
+
+
+.lang-label {
+  margin-top: 10px;
+  display: block;
+  font-weight: 500;
+}
+.lang-select {
+  margin-left: 10px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+.output-panels {
+  flex: 0.7;
+  margin-top: 90px; 
+}
+
+
+
+.output-audio {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  max-width: 450px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #34495e;
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.9s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Output panels as responsive grid */
+.output-panels {
+  flex: 1;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Individual output card */
+.output-audio {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  transition: transform 0.2s;
+}
+
+.output-audio:hover {
+  transform: translateY(-5px);
+}

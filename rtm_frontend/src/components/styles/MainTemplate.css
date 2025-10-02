@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+.main-template-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 600px;
+  width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+   margin-left: 100px; 
+  position: relative;
+}
+
+.template-content-box {
+  flex: 3;
+  border: 2px solid red;
+  border-radius: 12px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.template-section {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.template-content-text {
+  color: red;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.template-login-box {
+  width: 400px;            
+  height: 500px;            
+  flex: none;               
+  border: 1.5px solid red;
+  border-radius: 12px;
+  padding: 20px;     
+   margin-top: 33px;       
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.template-logo img {
+  width: 200px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.main-template-container .template-logo img {
+  width: 150px !important;
+  height: auto;
+}
+
+.main-template-container .template-powered-by img {
+  width: 200px !important;
+  height: auto;
+}
+
+.template-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.template-form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.template-form input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.template-form button {
+  background-color: #e60000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.template-powered-by {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.template-powered-by p {
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+.template-powered-by img {
+  height: 40px;
+  object-fit: contain;
+}
+
+
+
+
+
+
